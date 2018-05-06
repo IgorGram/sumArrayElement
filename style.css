@@ -1,0 +1,15 @@
+.label {
+    font-size: 24px;
+}
+
+.row {
+    margin: 20px 20px 0;
+}
+
+button {
+    margin: 20px 20px 0;
+}
+
+.arraySpan {
+    word-wrap: break-word;
+}

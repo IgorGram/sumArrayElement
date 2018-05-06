@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task</title>
+    <script src="app.js" rel="script" defer></script>
+    <link type="text/css " rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="row">
+    <label  for="arrLength" class="label">Enter the length of array:</label>
+    <input type="text" id="arrLength" size="4" maxlength="4" onchange="getArrayLength(this)">
+</div>
+<div class="row">
+    <label  for="maxValue" class="label">Enter the maximum value of the array elements:</label>
+    <input type="text" id="maxValue" size="4" maxlength="4" onchange="getMaxValue(this)">
+</div>
+<div class="row">
+    <label  for="customValue" class="label">Enter the array elements manually separated by commas:</label>
+    <input type="text" id="customValue" size="100" maxlength="4" onchange="getCustomValue(this)">
+</div>
+<button onclick="calculate()">Calculate</button>
+<div class="row">
+    <label class="label">Source array: </label><span class="arraySpan label">(...)</span>
+</div>
+</body>
+</html>
