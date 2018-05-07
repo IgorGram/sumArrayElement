@@ -23,14 +23,14 @@ const getRandomNumber = (min, max) => {
   return randomNumber;
 };
 
-const sortArray = (arr) => {
-  arr.sort((a, b) => {
-    if (a > b) return 1;
-    if (a < b) return -1;
-  });
-  console.log(arr);
-  return arr;
-};
+// const sortArray = (arr) => {
+//   arr.sort((a, b) => {
+//     if (a > b) return 1;
+//     if (a < b) return -1;
+//   });
+//   console.log(arr);
+//   return arr;
+// };
 
 const findIndexRequiredNum = (arr, num) => {
   const index = arr.indexOf(num);
@@ -40,17 +40,32 @@ const findIndexRequiredNum = (arr, num) => {
   return findIndexRequiredNum(arr, num - 1);
 };
 
-const getSum = (arr, index) => {
+const sumOfTwoNumberByIndex = (arr, index1, index2) => arr[index1] + arr[index2];
 
+const getSum = (arr, num, startIndex) => {
+  // const innerArr = [];
+  // let i = startIndex;
+  // let sum = arr[startIndex];
+  // while (sum <= num) {
+  //   sum += arr[i + 1];
+  //   innerArr.push(i);
+  //   i += 1;
+  // };
+  // return innerArr;
+  const nextIndex = startIndex + 1;
+  if (sumOfTwoNumberByIndex(arr, startIndex, nextIndex) > num) {
+
+  } else {
+
+  }
 };
 
 const calculate = () => {
   const arr = makeSourceArray(arrayData.length);
   changeLabelOfSourceArr(arr);
-  const sortingArray = sortArray(arr);
   const requiredNum = 100;
-  const indexRequiredNum = findIndexRequiredNum(sortingArray, requiredNum);
-  getSum(sortingArray, indexRequiredNum);
+  const startIndex = getRandomNumber(0, requiredNum / 2);
+  console.log(getSum(arr, requiredNum, startIndex));
 };
 
 const getArrayLength = (input) => {
